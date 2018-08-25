@@ -6,6 +6,8 @@ Qraph::Qraph(QWidget *parent) :
     ui(new Ui::Qraph)
 {
     ui->setupUi(this);
+    sc = new scene();
+    ui->graphicsView->setScene(sc);
 }
 
 Qraph::~Qraph()

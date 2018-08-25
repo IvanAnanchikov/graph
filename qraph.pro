@@ -25,10 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        qraph.cpp
+        qraph.cpp \
+    scene.cpp
 
 HEADERS += \
-        qraph.h
+        qraph.h \
+    scene.hpp
 
 FORMS += \
         qraph.ui

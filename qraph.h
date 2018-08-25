@@ -2,6 +2,7 @@
 #define QRAPH_H
 
 #include <QMainWindow>
+#include "scene.hpp"
 
 namespace Ui {
 class Qraph;
@@ -17,6 +18,7 @@ public:
 
 private:
     Ui::Qraph *ui;
+    scene *sc;
 };
 
 #endif // QRAPH_H
