@@ -13,7 +13,7 @@ void scene::mousePressEvent(QGraphicsSceneMouseEvent *event)
                5,
                5,
                QPen(Qt::NoPen),
-               QBrush(Qt::blue));
+               QBrush(Qt::gray));
     previousPoint = event->scenePos();
 }
 
@@ -23,6 +23,6 @@ void scene::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
             previousPoint.y(),
             event->scenePos().x(),
             event->scenePos().y(),
-            QPen(Qt::blue,5,Qt::SolidLine,Qt::RoundCap));
+            QPen(Qt::green,5,Qt::SolidLine,Qt::RoundCap));
     previousPoint = event->scenePos();
 }

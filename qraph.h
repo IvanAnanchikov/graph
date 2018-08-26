@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "scene.hpp"
+#include <QTimer>
+#include <QResizeEvent>
 
 namespace Ui {
 class Qraph;
@@ -19,6 +21,11 @@ public:
 private:
     Ui::Qraph *ui;
     scene *sc;
+    void resizeEvent(QResizeEvent * event);
+    QTimer *timer;
+
+private slots:
+    void slotTimer();
 };
 
 #endif // QRAPH_H

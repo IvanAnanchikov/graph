@@ -8,9 +8,26 @@ Qraph::Qraph(QWidget *parent) :
     ui->setupUi(this);
     sc = new scene();
     ui->graphicsView->setScene(sc);
+    timer = new QTimer();
+    connect(timer, &QTimer::timeout, this, &Qraph::slotTimer);
+    timer->start(100);
 }
 
 Qraph::~Qraph()
 {
     delete ui;
+}
+
+void Qraph::slotTimer()
+{
+ //переопределить размеры графической сцены в зависимости
+ //от размеров окна
+    timer->stop();
+    sc->setSceneRect(0,0, ui->graphicsView->width() - 20, ui->graphicsView->height() - 20);
+}
+
+void Qraph::resizeEvent(QResizeEvent *event)
+{
+    timer->start(100);
+    QWidget::resizeEvent(event);
 }
