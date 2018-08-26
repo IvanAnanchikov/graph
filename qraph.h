@@ -26,6 +26,8 @@ private:
 
 private slots:
     void slotTimer();
+    void on_Rotate_clockwise_clicked();
+    void on_Rotate_counterclockrwise_clicked();
 };
 
 #endif // QRAPH_H

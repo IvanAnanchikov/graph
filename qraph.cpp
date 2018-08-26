@@ -31,3 +31,13 @@ void Qraph::resizeEvent(QResizeEvent *event)
     timer->start(100);
     QWidget::resizeEvent(event);
 }
+
+void Qraph::on_Rotate_clockwise_clicked()
+{
+    ui->graphicsView->rotate(90);
+}
+
+void Qraph::on_Rotate_counterclockrwise_clicked()
+{
+    ui->graphicsView->rotate(-90);
+}
