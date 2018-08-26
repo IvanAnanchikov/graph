@@ -12,8 +12,10 @@ class scene : public QGraphicsScene
 public:
     explicit scene(QObject *parent = 0);
     ~scene();
+    bool Cursor = true;
 private:
     QPointF     previousPoint;
+
 private:
     void mousePressEvent(QGraphicsSceneMouseEvent * event);
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event);

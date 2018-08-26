@@ -29,8 +29,8 @@ SOURCES += \
     scene.cpp
 
 HEADERS += \
-        qraph.h \
-    scene.hpp
+    scene.hpp \
+    qraph.hpp
 
 FORMS += \
         qraph.ui

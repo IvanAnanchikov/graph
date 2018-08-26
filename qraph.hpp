@@ -5,6 +5,10 @@
 #include "scene.hpp"
 #include <QTimer>
 #include <QResizeEvent>
+#include <QtGui>
+#include <QtCore>
+#include <QDialog>
+#include <QGraphicsItem>
 
 namespace Ui {
 class Qraph;
@@ -23,11 +27,13 @@ private:
     scene *sc;
     void resizeEvent(QResizeEvent * event);
     QTimer *timer;
+    QGraphicsRectItem *rectangle;
 
 private slots:
     void slotTimer();
     void on_Rotate_clockwise_clicked();
     void on_Rotate_counterclockrwise_clicked();
+    void on_Rectangle_clicked();
 };
 
 #endif // QRAPH_H

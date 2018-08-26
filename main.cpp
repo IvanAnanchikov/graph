@@ -1,4 +1,4 @@
-#include "qraph.h"
+#include "qraph.hpp"
 #include <QApplication>
 
 int main(int argc, char *argv[])
