@@ -25,6 +25,8 @@ public:
 private:
     Ui::Qraph *ui;
     scene *sc;
+    scene *open_sc;
+    QGraphicsPixmapItem *open_image;
     void resizeEvent(QResizeEvent * event);
     QTimer *timer;
     QGraphicsRectItem *rectangle;
@@ -37,6 +39,7 @@ private slots:
     void on_Rectangle_clicked();
     void on_Ellipse_clicked();
     void on_actionSave_As_triggered();
+    void on_actionOpen_triggered();
 };
 
 #endif // QRAPH_H

@@ -13,8 +13,6 @@ Qraph::Qraph(QWidget *parent) :
     connect(timer, &QTimer::timeout, this, &Qraph::slotTimer);
     timer->start(100);
     sc->Cursor = false;
-    //QBrush redBrush(Qt::red);
-
 }
 
 Qraph::~Qraph()
@@ -71,4 +69,13 @@ void Qraph::on_actionSave_As_triggered()
     QPainter painter(&image);
     sc->render(&painter);
     image.save("result.png");
+}
+
+void Qraph::on_actionOpen_triggered()
+{
+    open_sc = new scene();
+    open_image = new QGraphicsPixmapItem(QPixmap("load_smile.png"));
+    open_sc ->addItem(open_image);
+    ui->graphicsView->setScene(open_sc);
+    //ui->graphicsView->setGeometry(QRect(0,0,1006,1006));
 }
