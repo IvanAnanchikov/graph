@@ -64,3 +64,11 @@ void Qraph::on_Ellipse_clicked()
     ellipse = sc->addEllipse(200,200,50,50,grayPen,greenBrush);
     ellipse->setFlag(QGraphicsItem::ItemIsMovable);
 }
+
+void Qraph::on_actionSave_As_triggered()
+{
+    QImage image(sc->width(), sc->height(), QImage::Format_ARGB32_Premultiplied);
+    QPainter painter(&image);
+    sc->render(&painter);
+    image.save("result.png");
+}

@@ -36,6 +36,7 @@ private slots:
     void on_Rotate_counterclockrwise_clicked();
     void on_Rectangle_clicked();
     void on_Ellipse_clicked();
+    void on_actionSave_As_triggered();
 };
 
 #endif // QRAPH_H
