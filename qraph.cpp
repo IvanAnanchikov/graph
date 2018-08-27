@@ -55,3 +55,12 @@ void Qraph::on_Rectangle_clicked()
     rectangle = sc->addRect(50,50,100,100,blackPen,blueBrush);
     rectangle->setFlag(QGraphicsItem::ItemIsMovable);
 }
+
+void Qraph::on_Ellipse_clicked()
+{
+    QBrush greenBrush(Qt::green);
+    QPen grayPen(Qt::gray);
+    grayPen.setWidth(5);
+    ellipse = sc->addEllipse(200,200,50,50,grayPen,greenBrush);
+    ellipse->setFlag(QGraphicsItem::ItemIsMovable);
+}

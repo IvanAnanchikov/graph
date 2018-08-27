@@ -28,12 +28,14 @@ private:
     void resizeEvent(QResizeEvent * event);
     QTimer *timer;
     QGraphicsRectItem *rectangle;
+    QGraphicsEllipseItem *ellipse;
 
 private slots:
     void slotTimer();
     void on_Rotate_clockwise_clicked();
     void on_Rotate_counterclockrwise_clicked();
     void on_Rectangle_clicked();
+    void on_Ellipse_clicked();
 };
 
 #endif // QRAPH_H
